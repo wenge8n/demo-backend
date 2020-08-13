@@ -32,7 +32,7 @@ export class ApiRoutes {
           success: true,
           data: DEVICES.filter(device => {
             return device.id === +deviceId;
-          }),
+          })[0],
         });
       }
       return res.send({ code: 400, msg: 'param is missing' });
